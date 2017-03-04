@@ -17,10 +17,10 @@ body.loading {
     overflow: hidden;   
 }
 
-/*body.loading .loadanime {
+body.loading #loadanime {
     display: block;
 }
-*/
+
 
 h1{
   text-align: center;
