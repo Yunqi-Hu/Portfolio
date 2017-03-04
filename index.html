@@ -34,15 +34,16 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/logo.png">
         <link rel="apple-touch-icon-precomposed" href="img/logo.png">
 
-        <script type="text/javascript">
-        $(document).ajaxStart(function(){
-          $("#loadanime").css("display", "block");
+        <script>
+        $(document).ready(function(){
+            $(document).ajaxStart(function(){
+                $("#loadanime").css("display", "block");
+            });
+            $(document).ajaxComplete(function(){
+                $("#loadanime").css("display", "none");
+            });
         });
-
-        $(document).ajaxComplete(function(){
-            $("#loadanime").css("display", "none");
-        });
-      </script>
+        </script>
        
 
 
