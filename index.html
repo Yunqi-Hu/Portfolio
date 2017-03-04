@@ -35,11 +35,12 @@
         <link rel="apple-touch-icon-precomposed" href="img/logo.png">
 
         <script type="text/javascript">
-        $body = $("body");
+        $(document).ajaxStart(function(){
+          $("#loadanime").css("display", "block");
+        });
 
-        $(document).on({
-            ajaxStart: function() { $body.addClass("loading");    },
-             ajaxStop: function() { $body.removeClass("loading"); }    
+        $(document).ajaxComplete(function(){
+            $("#loadanime").css("display", "none");
         });
       </script>
        
@@ -243,7 +244,7 @@
           
         </section>
 
-        <div class="loadanime"></div>
+        <div id="loadanime"></div>
 
 
 
